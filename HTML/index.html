@@ -4,40 +4,140 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Learning HTML</title>
+   
+    <!-- external css -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- internal css -->
+    <style>
+
+        h4{
+            color: lightgreen;
+        }
+        /* h3{
+            color: lightgreen;
+        } */
+
+    </style>
 </head>
+
 <body>
-  <p></p>
-  <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">click</a>
-  <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics" target="_blank">click</a>
-    <div>i am a division</div>
-    <img src="./cat2.jpeg" alt="cute cat">
+    <!-- we write our html  -->
+    <!-- heading tag  -->
+
+    <h1>Heading 1 </h1>
+    <h2>Heading 2</h2>
+    <h3 style="color: lightcoral;">Heading 3</h3>
+    <h3>Hello</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <!-- paragraph tag -->
+
+    <p style="font-size: 20px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, quis necessitatibus a amet rem ipsam facere
+        similique recusandae incidunt aperiam harum iure soluta doloremque. Quidem dolorum dolore nobis veniam facere?
+    </p>
+
+    <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, quis necessitatibus a amet rem ipsam facere
+        similique recusandae incidunt aperiam harum iure soluta doloremque. Quidem dolorum dolore nobis veniam facere?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, quis necessitatibus a amet rem ipsam facere
+        similique recusandae incidunt aperiam harum iure soluta doloremque. Quidem dolorum dolore nobis veniam facere?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, quis necessitatibus a amet rem ipsam facere
+        similique recusandae incidunt aperiam harum iure soluta doloremque. Quidem dolorum dolore nobis veniam facere?
+    </p>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, quis necessitatibus a amet rem ipsam facere
+        similique recusandae incidunt aperiam harum iure soluta doloremque. Quidem dolorum dolore nobis veniam facere?
+    </p>
+
+    <!-- division tag -->
+    <!-- it helps in dividing of webpage  -->
+    <div >
+        <h1 style="color: lightblue;">What is HTML</h1>
+        <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem rerum natus veniam ratione non quasi asperiores iure totam quo tempora similique eos quibusdam, excepturi sequi nam minus minima exercitationem? Molestias.
+        Debitis explicabo officiis ad corporis, consequatur labore ducimus assumenda! Odit expedita fugit voluptates, reprehenderit laboriosam explicabo aspernatur corrupti ab molestias id nesciunt deserunt. Debitis, voluptatibus! Est eveniet voluptate maxime optio.
+        Eveniet consectetur impedit, vitae aut harum quaerat at provident delectus placeat, sequi quis reiciendis consequuntur quos possimus quae illo vel dolor velit. Distinctio laudantium vel repellat, necessitatibus dolorum rem illum.
+        </p>
+    </div>
+
+    <div>
+        <h1>How does HTML work </h1> 
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem rerum natus veniam ratione non quasi asperiores
+            iure totam quo tempora similique eos quibusdam, excepturi sequi nam minus minima exercitationem? Molestias.
+            Debitis explicabo officiis ad corporis, consequatur labore ducimus assumenda! Odit expedita fugit voluptates,
+            reprehenderit laboriosam explicabo aspernatur corrupti ab molestias id nesciunt deserunt. Debitis, voluptatibus!
+            Est eveniet voluptate maxime optio.
+            Eveniet consectetur impedit, vitae aut harum quaerat at provident delectus placeat, sequi quis reiciendis
+            consequuntur quos possimus quae illo vel dolor velit. Distinctio laudantium vel repellat, necessitatibus dolorum
+            rem illum.
+        </p>
+    </div>
+
+    <!-- List -->
+        <!-- unordered list is a type of list in which numbering does not take place--> 
+        <h3>Grocery Shopping</h3>
+        <ul>
+            <li>Bananas</li>
+            <li>Sugar</li>
+            <li>Eggs</li>
+            <li>Bread</li>
+        </ul>
+
+        <!-- ordered list is a type of list in which numbering takes place -->
+        <h3>Steps to perform experiement</h3>
+        <ol>
+            <li>clean the apparatus</li>
+            <li>pour the chemical</li>
+            <li>heat it </li>
+            <li>let it cool</li>
+        </ol>
+
+    <!-- span tag -->
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque accusamus consequatur ex perspiciatis dolorum quo. <span style="color: blue;">Hello my name is Abhishek</span>, nam velit itaque repellat corrupti, dicta, voluptates obcaecati dolorem incidunt reiciendis!</p>
+    <p>ghvchebvchdfbvcuef</p>
+
+    <!-- anchor tag it is used to generate link-->
+    <a href="https://google.com"  target="_blank">Click here to Google</a>
+
+    <!-- image tag is used to attach image in our webpage 
+    it is a self closing tag--> 
+    <img src="https://i.pinimg.com/originals/58/b1/80/58b180bcba5a92d7d95c58153c9ce5b21.png" alt="2 cats wearing hats">
+    <br> <!--break tag-->
+    <img src="./cat.jpeg" alt="2 cats wearing hats">
+    <br>
+    <img src="../cat2.jpeg" alt="2 cats wearing hats">
+
+    <!-- tables -->
     <table border="6">
-      <caption>student details</caption>
-      <thead>
-        <tr>
-          <th>name</th>
-          <th>roll no</th>
-          <th> education</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>honey</td>
-          <td>1</td>
-          <td>btech</td>
-        </tr>
-        <tr>
-          <td>bhumika</td>
-          <td>2</td>
-          <td>btech</td>
-        </tr>
-        <tr>
-          <td>divyansh</td>
-          <td>3</td>
-          <td>btech</td>
-        </tr>
-      </tbody>
+        <caption>Student Details</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Roll No.</th>
+                <th>Education</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td >Bhavay</td>
+                <td>001</td>
+                <td>BBA</td>
+            </tr>
+            <tr>
+                <td>Saurabh</td>
+                <td>002</td>
+                <td>B.Tech.</td>
+            </tr>
+            <tr>
+                <td>Prashant</td>
+                <td>003</td>
+                <td>MBA</td>
+            </tr>
+        </tbody>
     </table>
 </body>
+
 </html>
