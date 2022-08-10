@@ -59,12 +59,12 @@ video{
     display: none;
 }
 .filter-cont{
+    position: absolute;
     height: 16rem;
     width: 5rem;
-    background-color: aquamarine;
-    position: absolute;
-    top: calc((100vh - 12rem) /2);
-    left: 3rem;
+    top:calc((100vh - 12rem)/2);
+    left:3rem;
+    background-color:aquamarine;
 }
 .filter{
     height: 4rem;
@@ -92,4 +92,33 @@ video{
 }
 .gallery:hover{
     cursor: pointer;
+}
+.scale-capture{
+    animation-name: scale-capture;
+    animation-duration: 1s;
+}
+@keyframes scale-capture{
+    0%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+.scale-record{
+    animation-name: scale-record;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+@keyframes scale-record{
+    0%{
+        transform: scale(0.8);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
