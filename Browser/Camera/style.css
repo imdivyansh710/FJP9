@@ -55,7 +55,7 @@ video{
 
 .timer-cont{
     position: absolute;
-    bottom:5rem;
+    bottom:10rem;
     left: 3rem;
     color: white;
     z-index: 1;
