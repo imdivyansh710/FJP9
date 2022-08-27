@@ -6,7 +6,7 @@ const captureBtnCont=document.querySelector(".capture-btn-cont")
 const timerCont = document.querySelector(".timer-cont");
 const timer = document.querySelector(".timer");
 const video = document.querySelector("video");
-const filterColor = "transparent";
+let filterColor = "transparent";
 const gallery = document.querySelector(".gallery");
 const constraints = {
     video: true,
@@ -21,7 +21,7 @@ navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
     mediaRecorder = new MediaRecorder(stream);
 
     mediaRecorder.addEventListener("start", () => {
-        console.log("rec started");
+        chunks = [];
     });
     mediaRecorder.addEventListener("dataavailable", (e) => {
         chunks.push(e.data); 
@@ -30,15 +30,9 @@ navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
     })
 
      mediaRecorder.addEventListener("stop", () => {
-         console.log("rec stopped");
          let blob = new Blob(chunks, { type: "video/mp4" });
          let videoURL = URL.createObjectURL(blob);
-         console.log(videoURL);
-
-        //  let a = document.createElement("a");
-        //  a.href = videoURL;
-        //  a.download="myVideo.mp4"
-        //  a.click();
+       
          if (db) {
              let videoID = uid();
              let dbTransaction=db.transaction("video", "readwrite");
@@ -49,10 +43,7 @@ navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
              };
              let addRequest = videoStore.add(videoEntry); 
              addRequest.onsuccess = function () {
-               console.log(
-                 "videoEntry added to the videoStore",
-                 addRequest.result
-               );
+               
              };
 
          }
@@ -112,8 +103,6 @@ function stopTimer() {
     timer.style.display = "none";
 }
 
-
-
 captureBtnCont.addEventListener("click", function(){
     captureBtn.classList.add("scale-capture");
     //canvas 
@@ -130,22 +119,16 @@ captureBtnCont.addEventListener("click", function(){
 
 
     let imageURL = canvas.toDataURL("image/jpeg");
-
-    //  let a = document.createElement("a");
-    //  a.href = image;
-    //  a.download = "myPic.jpeg";
-    // a.click();
     if (db) {
       let imageID = uid();
       let dbTransaction=db.transaction("image", "readwrite");
       let imageStore = dbTransaction.objectStore("image");
       let imageEntry = {
-        id: imageID,
+        id: `img-${imageID}`,
         url: imageURL,
       };
       let addRequest = imageStore.add(imageEntry);
       addRequest.onsuccess = function () {
-        console.log("imageEntry added to the imageStore", addRequest.result);
       };
     }
 
